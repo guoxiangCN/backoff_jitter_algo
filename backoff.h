@@ -40,8 +40,7 @@ int exponential(int base, int cap, int n) {
 }
 }  // namespace detail
 
-template <uint64_t BASE, uint64_t CAP,
-          BackoffStrategy ALGO = BackoffStrategy::kNoJitter>
+template <uint64_t BASE, uint64_t CAP, BackoffStrategy ALGO>
 struct BackoffFnCfg {
   uint64_t base{BASE};
   uint64_t cap{CAP};
